@@ -34,5 +34,6 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_bq_project:
     # Config indicated by + and applies to all files under models/example/
-    example:
-      +materialized: view
+    test: # lo que estecen esta carpeta por defecto va a staging
+      +materialized: view #crea una vista y no una tabla
+      +schema: staging #added this part all tables loads in new schema

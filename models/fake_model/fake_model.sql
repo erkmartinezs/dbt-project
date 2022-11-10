@@ -12,4 +12,6 @@ with src_dd as(
 )
 
 SELECT  *
-FROM    final
+FROM    final 
+
+-- this model load the table in default schema target (dbt_bq)
