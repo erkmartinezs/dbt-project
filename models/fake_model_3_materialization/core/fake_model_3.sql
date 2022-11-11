@@ -8,3 +8,6 @@
 SELECT  *
 FROM    {{ref('fake_model_intermediate')}} 
 WHERE REGEXP_CONTAINS(email,r'([.com]$)')=TRUE
+
+
+-- https://docs.getdbt.com/docs/build/materializations

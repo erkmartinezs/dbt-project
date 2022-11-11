@@ -28,4 +28,5 @@ WHERE REGEXP_CONTAINS(email,r'([.com]$)')=TRUE
 
 -- this model loads table in the specific schema declared (staging) in config
 
+--https://docs.getdbt.com/docs/build/custom-schemas
     
