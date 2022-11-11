@@ -6,6 +6,11 @@ models:
     description: 'table with fake data to test'
     columns: 
       - name: id
+        description: 'the primary key for this table'
+        # https://docs.getdbt.com/docs/build/tests
+        tests:
+          - unique
+          - not_null
       - name: first_name
       - name: last_name
       - name: email

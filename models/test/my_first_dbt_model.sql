@@ -19,6 +19,13 @@ with source_data as (
 
 select *
 from source_data
+where id is not null
+--cuando agregamos esta linea es posible lograr pasar el test
+/*
+primero generamos el fix, luego ejecutamos
+    1. dbt run
+    2. dbt test
+*/
 
 /*
     Uncomment the line below to remove records with null `id` values
