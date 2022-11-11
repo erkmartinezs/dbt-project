@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: wh_dummie
+    description: 'warehouse with fake data to test'
+    database: onihanzo
+    schema: wh_dummie
+    tables:
+      - name: dummies_data
+        description: 'table with fake data'
+        columns: 
+          - name: id
+          - name: first_name
+          - name: last_name
+          - name: email
+          - name: gender
+          - name: ip_address

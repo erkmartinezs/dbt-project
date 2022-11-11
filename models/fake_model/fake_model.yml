@@ -1,0 +1,13 @@
+version: 2
+
+models:
+  - name: fake_model
+    owner: fake_person
+    description: 'table with fake data to test'
+    columns: 
+      - name: id
+      - name: first_name
+      - name: last_name
+      - name: email
+      - name: gender
+      - name: ip_address
