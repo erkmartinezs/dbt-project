@@ -1,0 +1,21 @@
+
+version: 2
+
+models:
+    - name: seedModel_customTests
+      description: >
+        table with data extact to CSV data_test_outlier
+
+      columns: 
+        - name: id
+
+        - name: email
+
+        - name: name
+
+        - name: entry_date
+
+        - name: price
+          tests:
+            - outlier_value
+ 
