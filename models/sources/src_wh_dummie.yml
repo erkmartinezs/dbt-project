@@ -3,7 +3,11 @@ version: 2
 sources:
   - name: wh_dummie
     description: 'warehouse with fake data to test'
-    database: onihanzo
+    database: |
+      {%- if target.name =='dev' -%} onihanzo
+      {%- elif target.name =='prod' -%} onihanzo
+      {%- else -%} invalid_database
+      {%- endif -%}
     schema: wh_dummie
     tables:
       - name: dummies_data

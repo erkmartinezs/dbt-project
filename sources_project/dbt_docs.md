@@ -39,3 +39,20 @@ Activarlo con :
 4. git init {name project} --> crear un projecto dbt
 
 > si registra problema de ejecucion de scrips usar --> Set-ExecutionPolicy Unrestricted en powershell
+
+
+# enviroment variables
+
+- https://docs.getdbt.com/docs/build/environment-variables
+
+# handle with json jinja and macros
+
+- https://docs.getdbt.com/docs/get-started/learning-more/using-jinja#use-looplast-to-avoid-trailing-commas
+
+- https://docs.getdbt.com/reference/dbt-jinja-functions/run_query
+
+## change dbt project target
+
+- dbt debug --target prod
+_
+- dbt run -m fake_model --target prod
