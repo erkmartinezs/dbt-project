@@ -61,3 +61,8 @@ models:
     #     materialized: table
     #   intermediate:
     #     materialized: ephemeral 
+    tags:
+      +materialized: view
+      +tags: 
+            - tagtest
+            - another_tag

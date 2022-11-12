@@ -1,0 +1,17 @@
+
+version: 2
+
+models:
+    - name: tags
+      description: tags in yml
+
+      columns: 
+        - name: name
+          tags: 
+            - unique_notnull
+          tests: 
+            - unique
+            - not_null
+
+        - name: tags
+        - name: invocation_id
