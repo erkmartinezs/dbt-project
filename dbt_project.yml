@@ -6,6 +6,9 @@ name: 'dbt_bq_project'
 version: '1.0.0'
 config-version: 2
 
+vars:
+  var_date: 6/11/2022
+
 # This setting configures which "profile" dbt uses for this project.
 profile: 'bigquery-db'
 
@@ -25,6 +28,18 @@ clean-targets:         # directories to be removed by `dbt clean`
   - "dbt_modules"
 
 
+
+## ---> forma manual Hooks
+# on-run-start: insert into `onihanzo.dbt_hooks.audits`values('run_start',current_timestamp())
+# on-run-end: insert into `onihanzo.dbt_hooks.audits`values('run_end',current_timestamp())
+
+
+## ---> hook con macro
+on-run-start: "{{insert_audits('run_star')}}"
+on-run-end: "{{insert_audits('run_end')}}"
+
+
+
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
@@ -33,6 +48,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 # using the `{{ config(...) }}` macro.
 
 models:
+  pre-hook: insert into `onihanzo.dbt_hooks.audits`values('model_start',current_timestamp())
+  post-hook: insert into `onihanzo.dbt_hooks.audits`values('model_end',current_timestamp())
+
   dbt_bq_project:
     # Config indicated by + and applies to all files under models/example/
     example: # lo que estecen esta carpeta por defecto va a staging

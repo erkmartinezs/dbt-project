@@ -1,4 +1,4 @@
-{% macro test_outlier_value(model, column_name) %}
+{%test outlier_value(model, column_name) %}
 
 with validation as (
 
@@ -23,4 +23,4 @@ validation_errors as (
 select *
 from validation_errors
 
-{% endmacro %}
+{% endtest %}
