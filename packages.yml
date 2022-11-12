@@ -8,3 +8,9 @@
 
 # https://hub.getdbt.com/
 # https://docs.getdbt.com/docs/build/packages
+
+
+# packages:
+#   - git: "https://github.com/erkmartinezs/dbt-project.git" # git URL
+#     revision: develop # tag or branch name
+# no funciona por que solo tengo un projecto de nombre bdt_bq_project, con otro repo diferente deberia funcionar
