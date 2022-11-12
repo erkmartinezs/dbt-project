@@ -3,19 +3,19 @@ version: 2
 
 models:
     - name: seedModel_customTests
-      description: >
-        table with data extact to CSV data_test_outlier
+      description: "{{ doc('table_events')}}"
 
       columns: 
         - name: id
-
+          description: "{{ doc('model_smct_id')}}"
         - name: email
-
+          description: "{{ doc('model_smct_email')}}"
         - name: name
-
+          description: "{{ doc('model_smct_name')}}"
         - name: entry_date
-
+          description: "{{ doc('model_smct_entry_date')}}" 
         - name: price
+          description: "{{ doc('model_smct_price')}}"
           tests:
             - outlier_value
  
