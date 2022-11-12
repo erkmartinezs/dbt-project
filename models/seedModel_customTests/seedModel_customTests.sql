@@ -17,6 +17,7 @@ with csv as (
                     THEN 'variable ok'
                     ELSE 'N/A'
             END AS var_test_v2
+            'dbt_state' AS test_modified_models
     FROM {{ref('data_test_outlier')}}
 )
 
