@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: seed_model
+    owner: fake_person
+    description: 'table with data extact to CSV'
+    columns: 
+      - name: id
+      - name: first_name
+      - name: last_name
+      - name: email
+      - name: supervisor
+      - name: entry_date
+      
