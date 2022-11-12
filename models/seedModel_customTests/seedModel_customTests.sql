@@ -1,6 +1,8 @@
 {{  config(materialized='table',
+labels = {'owner': 'erik', 'labelx': 'x'},
     alias='seed_model_custom_test',
     schema='test_custom_test'
+    
 )
 }}
 
@@ -26,6 +28,7 @@ FROM csv
 
 --  https://docs.getdbt.com/guides/legacy/writing-custom-generic-tests
 --  https://docs.getdbt.com/docs/build/project-variableshttps://docs.getdbt.com/docs/build/project-variables
+--  https://docs.getdbt.com/reference/resource-configs/bigquery-configs#specifying-tags
 
 -- declaro variables con:
 -- > $ dbt run --vars 'key: value'

@@ -8,10 +8,14 @@ models:
       columns: 
         - name: id
           description: "{{ doc('model_smct_id')}}"
+          policy_tags: 
+          - 'high'
         - name: email
           description: "{{ doc('model_smct_email')}}"
+          policy_tags: 'need_to_know'
         - name: name
           description: "{{ doc('model_smct_name')}}"
+          policy_tags: 'need_to_know'
         - name: entry_date
           description: "{{ doc('model_smct_entry_date')}}" 
         - name: price
@@ -19,3 +23,6 @@ models:
           tests:
             - outlier_value
  
+
+#  https://cloud.google.com/bigquery/docs/row-level-security-intro?authuser=1&_ga=2.216760788.-398710154.1668144102&_gac=1.113129206.1668218889.Cj0KCQiAgribBhDkARIsAASA5bsqCA2dn1P6IGBa0fEjAXbKAhm3I6croAsWuA1eTskVqQ75bR0chnEaAiOTEALw_wcB
+# https://cloud.google.com/static/dlp/docs/images/column-data-profiles_2x.png?authuser=1
