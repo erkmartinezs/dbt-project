@@ -1,0 +1,11 @@
+
+version: 2
+
+models:
+    - name: ephemeral
+      description: testing ephemeral tables
+
+      columns: 
+        - name: name
+        - name: tags
+        - name: invocation_id
