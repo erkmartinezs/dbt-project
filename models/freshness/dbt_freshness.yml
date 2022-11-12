@@ -1,0 +1,27 @@
+
+version: 2
+
+sources: 
+  - name: freshness
+    database: onihanzo
+    schema: dbt_freshness
+
+    freshness:
+      warn_after: {count: 5, period: minute}
+      error_after: {count: 12, period: minute}
+      filter: date_diff(current_timestamp(), created_at, minute) > 15
+
+    loaded_at_field: "current_timestamp()"
+
+    tables: 
+      - name: test_freshness
+        description: 'you already know' 
+        columns: 
+          - name: id
+          - name: name
+          - name: created_at
+
+
+# -->  dbt source snapshot-freshness
+
+# https://docs.getdbt.com/reference/resource-properties/freshness
