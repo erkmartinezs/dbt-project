@@ -56,3 +56,6 @@ Activarlo con :
 - dbt debug --target prod
 _
 - dbt run -m fake_model --target prod
+
+# tags and labels BigQuery
+- https://docs.getdbt.com/reference/resource-configs/bigquery-configs#labels-and-tags
