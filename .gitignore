@@ -3,5 +3,6 @@ sources_project/*.json
 target/
 dbt_modules/
 logs/
+.dbt-env/
 
 
